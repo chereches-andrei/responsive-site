@@ -127,7 +127,7 @@ main, footer{
 }
 .services-page h1{
     position: relative;
-    padding-bottom:20px;
+    padding-bottom:5%;
     text-transform: uppercase; 
 }
 .services-page h1::after{
@@ -136,10 +136,10 @@ main, footer{
     height: 3px;
     width:80px;
     position: absolute;
-    left: 47.5%;
-    bottom:-10px;
-    text-align: center;
-    margin:-1px;;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
     
 }
 .services-items{
@@ -194,10 +194,10 @@ main, footer{
     height: 3px;
     width:80px;
     position: absolute;
-    left: 47.5%;
-    bottom:-10px;
+    inset: 0;
+    bottom:-50px;
     text-align: center;
-    margin:-1px;;   
+    margin:auto;   
 }
 .about-us p{
     margin:50px 0 50px 0;
@@ -235,10 +235,11 @@ main, footer{
     opacity: 100%;
     transition: .8s;
     max-width: 100%;
+    
 }
 .person img:hover {
     opacity: 5%;
-    box-shadow: 5px 5px #95e1d3;
+    
      }
  .gradient{
     background:linear-gradient(to bottom, #f38181b6, #fce38acc);
@@ -264,6 +265,7 @@ main, footer{
 .social-icons:hover{
     cursor: pointer;
 }
+
 .media{ 
     display: flex;
     justify-content: center;
@@ -365,6 +367,10 @@ footer{
     min-width:60%;
     
    }
+   .services-page h1::after{
+    
+    transform: translate(-50px, 10px);
+   }
    .services-page{
     font-size: 40px;
    }
@@ -386,6 +392,11 @@ footer{
     justify-content: center;
     align-items: center;
     
+   }
+   .media{
+    inset: 0;
+    margin:auto;
+    position: absolute;
    }
    .gradient{
     position: absolute;
@@ -416,6 +427,8 @@ footer{
     .services-page > h1{
         font-size: 40px;
     }
+    
+   
     .services-items{
         display:flex;
         flex-direction: column;
@@ -425,6 +438,19 @@ footer{
         flex-wrap: wrap;
         
         
+    }
+    .items h2{
+        font-size: 20px;
+    }
+    .services-items h1::after{
+        position: absolute;
+        inset: 0;
+        
+    }
+    .services-items > div{
+        
+        display:inline-block;
+        text-align: center;
     }
     
     .about-us span, h1, p{
@@ -439,21 +465,25 @@ footer{
         flex-shrink: 1;
         
        }
+       .media{
+        inset: 0;
+        margin:auto;
+        position: absolute;
+       }
        .gradient{
         position: absolute;
-        margin:0;
-        padding: 0;
-        left:0;
-        max-height: 100%;
-        min-width: 100%;
-        
        }
-      
+       .subscribe{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
        .copyright p, span{
         font-size: 15px;
        }
        .subscribe input, button{
-        font-size: 20px;
+        font-size: 10px;
+        margin-right:10px;
        }
 }
 
@@ -467,6 +497,7 @@ footer{
     .welcome-text h1, button{
         font-size: 50px;
     }
+    
     .copyright p, span{
         font-size: 20px;
         margin-right: 10px;
@@ -484,37 +515,59 @@ footer{
         align-items: center;
     }
     nav ul a li{
-        font-size: 30px;
+        font-size: 20px;
     }
     nav ul a li img{
-        width:50px;
+        width:40px;
+    }
+    .services-page h1{
+        text-align: center;
+    }
+    .services-page h1::after{
+        position: absolute;
+        left:50%;
+        top:100%;
+        transform: translate(-50%, -50%);
+    }
+    .services-items > div{
+        
+        display:inline-block;
+        text-align: center;
+    }
+    .items h2{
+        font-size: 20px;
+    }
+    .about-us h1::after{
+        position: absolute;
+        left:40%;
+        top:80%;
+        transform: translate(-50%, -50%);
     }
    
     footer{
-        display:flex;
+        display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        height: 100%;
+        align-content: center;
+        
     }
-    .copyright p, span{
-        align-items: center;
-        font-size: 15px;
-        margin-right: 10px;
+   
+    footer::after{
+        top:10%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        margin-top:10%;
+    }
+    .copyright {
+        text-align: center;
+        font-size: 5px;
+        
        }
        .subscribe{
         display:flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap:20px;
        }
-       .subscribe input{
-        margin-bottom: 10px;
-        text-align: center;
-       }
-       .subscribe input, button{
-        font-size: 10px;
-        align-items: center;
-        
-
-       }
+      
 }
